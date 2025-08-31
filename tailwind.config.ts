@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -51,6 +52,22 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Division-specific colors
+				tech: {
+					DEFAULT: 'hsl(var(--tech))',
+					foreground: 'hsl(var(--tech-foreground))',
+					glow: 'hsl(var(--tech-glow))'
+				},
+				business: {
+					DEFAULT: 'hsl(var(--business))',
+					foreground: 'hsl(var(--business-foreground))',
+					glow: 'hsl(var(--business-glow))'
+				},
+				education: {
+					DEFAULT: 'hsl(var(--education))',
+					foreground: 'hsl(var(--education-foreground))',
+					glow: 'hsl(var(--education-glow))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
