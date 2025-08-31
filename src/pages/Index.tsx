@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import DivisionCard from "@/components/DivisionCard";
@@ -39,54 +40,60 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div id="tech">
-              <DivisionCard
-                title="Absra Tech"
-                description="Cutting-edge technology solutions that drive digital transformation and innovation for businesses of all sizes."
-                features={[
-                  "Custom Software Development",
-                  "Mobile App Development", 
-                  "Cloud Solutions & DevOps",
-                  "AI & Machine Learning",
-                  "Cybersecurity Services"
-                ]}
-                icon={Code2}
-                variant="tech"
-                buttonText="Explore Tech Solutions"
-              />
+              <Link to="/tech">
+                <DivisionCard
+                  title="Absra Tech"
+                  description="Cutting-edge technology solutions that drive digital transformation and innovation for businesses of all sizes."
+                  features={[
+                    "Custom Software Development",
+                    "Mobile App Development", 
+                    "Cloud Solutions & DevOps",
+                    "AI & Machine Learning",
+                    "Cybersecurity Services"
+                  ]}
+                  icon={Code2}
+                  variant="tech"
+                  buttonText="Explore Tech Solutions"
+                />
+              </Link>
             </div>
             
             <div id="business">
-              <DivisionCard
-                title="Absra Business"
-                description="Strategic business consulting and growth solutions to help organizations thrive in competitive markets."
-                features={[
-                  "Business Strategy Consulting",
-                  "Digital Transformation",
-                  "Marketing & Growth Strategies",
-                  "Financial Advisory Services",
-                  "HR & Talent Solutions"
-                ]}
-                icon={TrendingUp}
-                variant="business"
-                buttonText="Discover Business Solutions"
-              />
+              <Link to="/business">
+                <DivisionCard
+                  title="Absra Business"
+                  description="Strategic business consulting and growth solutions to help organizations thrive in competitive markets."
+                  features={[
+                    "Business Strategy Consulting",
+                    "Digital Transformation",
+                    "Marketing & Growth Strategies",
+                    "Financial Advisory Services",
+                    "HR & Talent Solutions"
+                  ]}
+                  icon={TrendingUp}
+                  variant="business"
+                  buttonText="Discover Business Solutions"
+                />
+              </Link>
             </div>
             
             <div id="education">
-              <DivisionCard
-                title="Absra Education"
-                description="Comprehensive educational programs and training that prepare students for future success in technology and business."
-                features={[
-                  "Primary & Secondary Programs",
-                  "Technology Workshops",
-                  "Business Skills Training",
-                  "AI & Innovation Labs",
-                  "Career Development"
-                ]}
-                icon={GraduationCap}
-                variant="education"
-                buttonText="Learn About Education"
-              />
+              <Link to="/education">
+                <DivisionCard
+                  title="Absra Education"
+                  description="Comprehensive educational programs and training that prepare students for future success in technology and business."
+                  features={[
+                    "Primary & Secondary Programs",
+                    "Technology Workshops",
+                    "Business Skills Training",
+                    "AI & Innovation Labs",
+                    "Career Development"
+                  ]}
+                  icon={GraduationCap}
+                  variant="education"
+                  buttonText="Learn About Education"
+                />
+              </Link>
             </div>
           </div>
         </div>

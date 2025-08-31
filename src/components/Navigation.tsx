@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -6,12 +7,12 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: "Home", href: "#home" },
-    { label: "Tech", href: "#tech" },
-    { label: "Business", href: "#business" },
-    { label: "Education", href: "#education" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "Tech", href: "/tech" },
+    { label: "Business", href: "/business" },
+    { label: "Education", href: "/education" },
+    { label: "About", href: "/about-absra" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -19,23 +20,23 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 hero-gradient rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">A</span>
             </div>
             <span className="text-xl font-bold">Absra</span>
-          </div>
+          </Link>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className="text-muted-foreground hover:text-foreground transition-colors duration-200 hover:underline underline-offset-4"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <Button variant="hero" size="sm">
               Get Started
@@ -58,14 +59,14 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               {menuItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
+                  to={item.href}
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200 px-2 py-1"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <Button variant="hero" size="sm" className="w-fit">
                 Get Started
